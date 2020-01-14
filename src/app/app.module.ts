@@ -3,19 +3,23 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 
-import {AppLogin} from './login/login.component' //Agregado
-import {AppHome} from './home/home.component'
+import {AppLogin} from './login/login.component' 
 import { AppRoutingModule } from './app-routing.module';
+import { HomeModule } from './home/home.module';
+import { PagesModule } from './pages/pages.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AppLogin,
-    AppHome
+    AppLogin
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    HomeModule,
+    AppRoutingModule,
+    PagesModule
+ 
   ],
   providers: [],
   bootstrap: [AppComponent]
